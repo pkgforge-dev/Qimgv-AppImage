@@ -12,6 +12,7 @@ export ICON=/usr/share/icons/hicolor/128x128/apps/qimgv.png
 export DESKTOP=/usr/share/applications/qimgv.desktop
 export ANYLINUX_LIB=1
 export DEPLOY_OPENGL=1
+export DEPLOY_PIPEWIRE=1
 
 # Deploy dependencies
 quick-sharun \
