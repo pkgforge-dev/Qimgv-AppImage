@@ -9,6 +9,8 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
 	cmake             \
 	exiv2             \
+	kvantum           \
+	lxqt-qtplugin     \
 	mpv               \
 	ninja             \
 	opencv            \
@@ -18,7 +20,8 @@ pacman -Syu --noconfirm \
 	qt6-imageformats  \
 	qt6-multimedia    \
 	qt6-svg           \
-	qt6-tools
+	qt6-tools         \
+	qt6ct
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
