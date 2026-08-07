@@ -39,6 +39,10 @@ git fetch --tags origin
 TAG=$(git tag --sort=-v:refname | grep -vi 'rc\|alpha\|beta' | head -1)
 git checkout "$TAG"
 
+# backport fix from master to build with latest mpv opencv versions
+sed -i -e 's/{get_proc_address, nullptr, nullptr}/{get_proc_address, nullptr}/' ./plugins/player_mpv/src/mpvwidget.cpp
+sed -i -e 's|<opencv4/opencv2/|<opencv2/|g' ./qimgv/3rdparty/QtOpenCV/cvmatandqimage.h ./qimgv/3rdparty/QtOpenCV/cvmatandqimage.cpp
+
 mkdir -p ./build
 cd ./build
 cmake ../ \
